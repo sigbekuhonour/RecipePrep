@@ -27,6 +27,7 @@ dependencyResolutionManagement {
     }
 }
 
-include(":androidApp")
+if (System.getenv("XCODE_VERSION_ACTUAL") == null) {
+    include(":androidApp")
+}
 include(":sharedLogic")
-include(":sharedUI")
